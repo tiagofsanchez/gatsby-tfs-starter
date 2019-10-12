@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { Styled , jsx } from 'theme-ui';
-
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "gatsby";
+import PostHeader from './PostHeader';
 
 
 class PostListing extends React.Component {
@@ -16,28 +16,38 @@ class PostListing extends React.Component {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        timeToRead: postEdge.node.timeToRead,
+        category: postEdge.node.frontmatter.category
       });
     });
     return postList;
   }
 
+  
+
   render() {
+    
     const postList = this.getPostList();
+    console.log(postList)
     return (
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Styled.h1>
-            <Styled.a
-              as={Link}
-              to={post.path}
-              key={post.title}
-              sx={{ textDecoration: `none` }}
-            >
-              {post.title}
-            </Styled.a>
-          </Styled.h1>
+          <Fragment key={post.title}>
+            <Styled.h1 >
+              <Styled.a
+                as={Link}
+                to={post.path}
+                sx={{ textDecoration: `none` }}
+              >
+                {post.title}
+              </Styled.a>
+            </Styled.h1>
+            <PostHeader post={post}/>
+            <Styled.p>
+              {post.excerpt}
+            </Styled.p>
+          </Fragment>
         ))}
       </div>
     );

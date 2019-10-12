@@ -1,41 +1,48 @@
 
- const darkPink = `#d23669`
- const pink = `pink`
- const blueGray = `#282c35`
- const lightblue = `#a5a4a6`
- const lightGray = '#eee'
-
+const darkPink = `#d23669`
+const pink = `#ffa8b7`
+const blueGray = `#282c35`
+const lightblue = `#a5a4a6`
+const lightGray = '#eee'
 
 export default {
   colors: {
-    text: blueGray,
-    primary: darkPink,
-    heading: pink,
+    text: "#000",
     background: lightGray,
-    modes: {  
+    primary: darkPink,
+    muted: "#f6f6f6f",
+    modes: {
       dark: {
+        text: "#fff",
         background: blueGray,
         primary: pink,
-        highlight: lightblue,
+        muted: "#111",
       },
-    },
+    }
   },
   fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'Georgia, serif',
+    body: "system-ui, sans-serif",
+    heading: "Georgia, serif"
   },
   fontWeights: {
     body: 400,
-    heading: 700,
+    heading: 700
   },
   styles: {
     h1: {
-      fontSize: 50,
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      color: 'primary',
+      fontSize: 40,
+      fontFamily: "heading",
+      fontWeight: "heading",
+      color:`primary`,
       mt: 4,
-      mb: 2,
+      mb: 2
     },
+    a: {
+      color: `primary`,
+      fontFamily: "heading",
+    },
+    p:{
+      fontFamily:"body"
+    } 
   }
 };
