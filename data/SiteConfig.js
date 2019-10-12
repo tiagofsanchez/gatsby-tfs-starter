@@ -38,6 +38,12 @@ const config = {
       iconClassName: "fa fa-envelope"
     }
   ],
+  menuLinks: [
+    {
+      name: "Me",
+      url: "/about"
+    }
+  ],
   copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.

@@ -17,7 +17,7 @@ const PostHeader = (props) => {
           <small>
             {post.date} / {post.timeToRead} minute(s) reading time
           </small>
-          <div sx={{ display: `flex`, mt:2 }}>
+          <div sx={{ display: `flex`,flexWrap:`wrap`,  mt:2 }}>
             <Styled.p
               as={Link}
               sx={{

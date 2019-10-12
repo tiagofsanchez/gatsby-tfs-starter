@@ -24,6 +24,9 @@ class NavMenu extends React.Component {
   
   render() {
     const { scrolled } = this.state
+    const { menuLinks } = this.props
+
+    
 
     let shadow = `none`;
     if( scrolled === true ) { 
