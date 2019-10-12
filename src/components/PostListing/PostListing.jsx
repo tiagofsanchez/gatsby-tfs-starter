@@ -1,5 +1,9 @@
+/** @jsx jsx */
+import { Styled , jsx } from 'theme-ui';
+
 import React from "react";
 import { Link } from "gatsby";
+
 
 class PostListing extends React.Component {
   getPostList() {
@@ -24,11 +28,17 @@ class PostListing extends React.Component {
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
-        ))
-}
+          <Styled.h1>
+            <Styled.a
+              as={Link}
+              to={post.path}
+              key={post.title}
+              sx={{ textDecoration: `none` }}
+            >
+              {post.title}
+            </Styled.a>
+          </Styled.h1>
+        ))}
       </div>
     );
   }
