@@ -20,6 +20,9 @@ export default {
       },
     }
   },
+  sizes: {
+    container: 800,
+  },
   fonts: {
     body: "system-ui, sans-serif",
     heading: "Georgia, serif"

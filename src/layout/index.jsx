@@ -10,12 +10,12 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <Styled sx={{fontFamily:`body`}}>
+      <Styled sx={{ fontFamily: `body`, maxWidth: `container`, m: `auto` }}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
           <html lang="en" />
         </Helmet>
-        <NavMenu />
+        <NavMenu/>
         {children}
       </Styled>
     );

@@ -11,7 +11,7 @@ class Index extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="index-container">
+        <div style={{marginTop: `100px`}} >
           <Helmet title={config.siteTitle} />
           <SEO />
           <PostListing postEdges={postEdges} />
