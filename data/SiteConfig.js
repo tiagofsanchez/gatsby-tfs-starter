@@ -42,7 +42,11 @@ const config = {
     {
       name: "Me",
       url: "/about"
-    }
+    }, 
+    {
+      name: "Articles",
+      url: "/blog"
+    },
   ],
   copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.

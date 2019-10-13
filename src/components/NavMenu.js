@@ -1,5 +1,6 @@
 import React from "react";
 import ToogleMode from './ToogleMode'
+import { Link } from 'gatsby'
 
 /** @jsx jsx */
 import { Styled , jsx} from 'theme-ui'
@@ -14,6 +15,11 @@ class NavMenu extends React.Component {
     window.addEventListener('scroll', this.navOnScroll)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.navOnScroll)
+  }
+
+
   navOnScroll = () => { 
     if (window.scrollY > 30 ) {
       this.setState({scrolled: true})
@@ -26,7 +32,7 @@ class NavMenu extends React.Component {
     const { scrolled } = this.state
     const { menuLinks } = this.props
 
-    
+    console.log(menuLinks)
 
     let shadow = `none`;
     if( scrolled === true ) { 
@@ -44,7 +50,7 @@ class NavMenu extends React.Component {
             height: `60px`,
             backgroundColor: `background`,
             boxShadow: shadow,
-            m: `auto`,
+            m: `auto`
           }}
         >
           <div
@@ -57,8 +63,23 @@ class NavMenu extends React.Component {
               px: 2
             }}
           >
-            <div>LOGO HERE</div>
-            <ToogleMode />
+            <Link to="/" sx={{textDecoration: `none`, color: `primary`}}>
+              <div>LOGO HERE</div>
+            </Link>
+            <div style={{ display: `flex`, alignItems: `center` }}>
+              {menuLinks.map(link => {
+                return (
+                  <Styled.h4
+                    as={Link}
+                    to={link.url}
+                    sx={{ mr: "20px", textDecoration: `none` }}
+                  >
+                    {link.name}
+                  </Styled.h4>
+                );
+              })}
+              <ToogleMode />
+            </div>
           </div>
         </Styled>
       </nav>

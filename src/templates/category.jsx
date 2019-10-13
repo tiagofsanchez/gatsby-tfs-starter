@@ -11,12 +11,10 @@ export default class CategoryTemplate extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="category-container">
-          <Helmet
-            title={`Posts in category "${category}" | ${config.siteTitle}`}
-          />
-          <PostListing postEdges={postEdges} />
-        </div>
+        <Helmet
+          title={`Posts in category "${category}" | ${config.siteTitle}`}
+        />
+        <PostListing postEdges={postEdges} />
       </Layout>
     );
   }
@@ -35,7 +33,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
-            date (formatString: "MMMM Do, YYYY")
+            date(formatString: "MMMM Do, YYYY")
           }
           excerpt
           timeToRead
