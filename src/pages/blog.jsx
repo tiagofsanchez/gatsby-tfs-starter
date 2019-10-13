@@ -6,7 +6,7 @@ import PostListing from "../components/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
-class Index extends React.Component {
+class Blog extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
@@ -19,13 +19,13 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Blog;
 
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query IndexQuery {
+export const blogQuery = graphql`
+  query BlogQuery {
     allMarkdownRemark(
-      limit: 4
+      limit: 2000
       sort: { fields: [fields___date], order: DESC }
     ) {
       edges {

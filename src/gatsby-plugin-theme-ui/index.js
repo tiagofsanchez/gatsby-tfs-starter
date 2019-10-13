@@ -1,9 +1,9 @@
 
-const darkPink = `#d23669`
+const darkPink = `#2f38a6`
 const pink = `#ffa8b7`
 const blueGray = `#282c35`
 const lightblue = `#a5a4a6`
-const lightGray = '#eee'
+const lightGray = `#c3c3c3`
 
 export default {
   colors: {
@@ -40,8 +40,8 @@ export default {
       mt: 4,
       mb: 2
     },
-    h4: {
-      fontSize: `16px`,
+    h3: {
+      fontSize: `14px`,
       fontFamily: "heading",
       fontWeight: "heading",
       color: `primary`
