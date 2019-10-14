@@ -40,6 +40,12 @@ export default {
       mt: 4,
       mb: 2
     },
+    h2: { 
+      fontSize: 30,
+      fontFamily: "heading",
+      fontWeight: "heading",
+      color: `primary`
+    },
     h3: {
       fontSize: `14px`,
       fontFamily: "heading",
