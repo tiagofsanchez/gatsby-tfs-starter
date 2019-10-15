@@ -3,19 +3,21 @@ const darkPink = `#2f38a6`
 const pink = `#ffa8b7`
 const blueGray = `#282c35`
 const lightblue = `#a5a4a6`
-const lightGray = `#c3c3c3`
+const lightGray = `#ccc`
 
 export default {
   colors: {
     text: "#000",
     background: lightGray,
     primary: darkPink,
+    secondary: `#eee`,
     muted: "#f6f6f6f",
     modes: {
       dark: {
         text: "#fff",
         background: blueGray,
         primary: pink,
+        secondary: `black`,
         muted: "#111",
       },
     }
