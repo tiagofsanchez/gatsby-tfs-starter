@@ -22,6 +22,12 @@ module.exports = {
     "gatsby-plugin-lodash",
     "gatsby-plugin-theme-ui",
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",
