@@ -57,6 +57,7 @@ class NavMenu extends React.Component {
             sx={{
               display: `flex`,
               justifyContent: `space-between`,
+              alignItems: `center`,
               maxWidth: `container`,
               m: "auto",
               mt: `18px`,
@@ -72,7 +73,7 @@ class NavMenu extends React.Component {
                   <Styled.h3
                     as={Link}
                     to={link.url}
-                    sx={{ mr: "20px", textDecoration: `none` }}
+                    sx={{ mr: "20px", textDecoration: `none`, color: `primary` }}
                   >
                     {link.name}
                   </Styled.h3>

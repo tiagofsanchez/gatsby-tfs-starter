@@ -1,65 +1,36 @@
 
-const darkPink = `#2f38a6`
-const pink = `#ffa8b7`
-const blueGray = `#282c35`
-const lightblue = `#a5a4a6`
-const lightGray = `#ccc`
+import styles from "./styles"
+import colors from "./colors"
+import prism from "./prism"
+
 
 export default {
-  colors: {
-    text: "#000",
-    background: lightGray,
-    primary: darkPink,
-    secondary: `#eee`,
-    muted: "#f6f6f6f",
-    modes: {
-      dark: {
-        text: "#fff",
-        background: blueGray,
-        primary: pink,
-        secondary: `black`,
-        muted: "#111",
-      },
-    }
-  },
+  breakpoints: ['40em', '52em', '64em'],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
     container: 800,
+  },fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'Georgia, serif',
+    monospace: 'Menlo, monospace',
   },
-  fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif"
-  },
+  fontSizes: [
+    12, 14, 16, 20, 24, 32, 48, 64
+  ],
   fontWeights: {
     body: 400,
-    heading: 700
+    heading: 700,
+    bold: 700,
   },
-  styles: {
-    h1: {
-      fontSize: 40,
-      fontFamily: "heading",
-      fontWeight: "heading",
-      color:`primary`,
-      mt: 4,
-      mb: 2
-    },
-    h2: { 
-      fontSize: 30,
-      fontFamily: "heading",
-      fontWeight: "heading",
-      color: `primary`
-    },
-    h3: {
-      fontSize: `14px`,
-      fontFamily: "heading",
-      fontWeight: "heading",
-      color: `primary`
-    },
-    a: {
-      color: `primary`,
-      fontFamily: "heading",
-    },
-    p:{
-      fontFamily:"body"
-    } 
-  }
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  letterSpacings: {
+    body: 'normal',
+    caps: '0.2em',
+  },
+  styles, 
+  prism,
+  colors,
 };

@@ -24,10 +24,9 @@ class Index extends React.Component {
             <Styled.h1 sx={{ color: `text` }}>Ola, I'm Tiago</Styled.h1>
             <Styled.p>
               I am learning to code in ReactJS (from scratch) and I write about
-              that and other related stuff!
+              that and other related stuff here! Basically, sharing what I am learning!
             </Styled.p>
           </div>
-
           <Styled
             sx={{
               flex: `1 1 250px`,
@@ -36,21 +35,16 @@ class Index extends React.Component {
               textAlign: `center`,
               bg: `secondary`,
               height: `200px`,
-              justifyContent: `space-between`, 
-              borderRadius: `20px`, 
+              justifyContent: `space-between`,
+              borderRadius: `20px`,
               boxShadow: `1px 2px 10px rgba(0, 0, 0, 0.4)`
             }}
           >
             <image
-              src={avatar}
+              src="https://github.com/tiagofsanchez/tfs-starter/blob/master/content/images/avatar.png?raw=true"
               alt="My picture"
-              sx={{
-                width: `100px`,
-                height: `100px`,
-                borderRadius: 999      
-              }}
             />
-            <button sx={{ alignSelf: `center`, mb: 4}}>Click here</button>
+            <button sx={{ alignSelf: `center`, mb: 4 }}>Click here</button>
           </Styled>
         </section>
         <section>
