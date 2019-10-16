@@ -13,8 +13,13 @@ export default class MainLayout extends React.Component {
     const { children } = this.props;
 
     return (
-
-      <Styled sx={{ fontFamily: `body`, maxWidth: `container`, m: `auto` }}>
+      <Styled
+        sx={{
+          fontFamily: `body`,
+          width: ["90%", `container`, `container`],
+          m: `auto`
+        }}
+      >
         <Helmet>
           <meta name="description" content={config.siteDescription} />
           <html lang="en" />
@@ -24,7 +29,6 @@ export default class MainLayout extends React.Component {
           {children}
         </div>
       </Styled>
-    
     );
   }
 }

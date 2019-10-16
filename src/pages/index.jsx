@@ -27,25 +27,7 @@ class Index extends React.Component {
               that and other related stuff here! Basically, sharing what I am learning!
             </Styled.p>
           </div>
-          <Styled
-            sx={{
-              flex: `1 1 250px`,
-              display: `flex`,
-              flexDirection: `column`,
-              textAlign: `center`,
-              bg: `secondary`,
-              height: `200px`,
-              justifyContent: `space-between`,
-              borderRadius: `20px`,
-              boxShadow: `1px 2px 10px rgba(0, 0, 0, 0.4)`
-            }}
-          >
-            <image
-              src="https://github.com/tiagofsanchez/tfs-starter/blob/master/content/images/avatar.png?raw=true"
-              alt="My picture"
-            />
-            <button sx={{ alignSelf: `center`, mb: 4 }}>Click here</button>
-          </Styled>
+          
         </section>
         <section>
           <Styled.h1>Latest posts</Styled.h1>

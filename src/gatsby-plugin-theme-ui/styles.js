@@ -1,5 +1,3 @@
-
-
 export default {
   root: {
     fontFamily: `body`,
@@ -31,13 +29,21 @@ export default {
     paddingX: `0.2em`,
   },
   // from typography overrideThemeStyles
+  h1: {
+    fontSize: 32,
+    fontFamily: 'heading',
+    fontWeight: 'heading',
+    color: 'primary',
+    mt: 4,
+    mb: 4,
+  },
   a: {
     color: `primary`,
   },
-  hr: {
-    borderColor: `muted`,
-  },
   p: {
+    fontWeight:`body`,
+    lineHeight: `body`,
+    letterSpacing: `body`,
     code: {
       fontSize: `inherit`,
     },
