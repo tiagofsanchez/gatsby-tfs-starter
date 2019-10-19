@@ -12,7 +12,7 @@ import { Styled, jsx } from "theme-ui";
 
 class Index extends React.Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.allMdx.edges;
     return (
       <Layout>
         <Helmet title={config.siteTitle} />
@@ -46,7 +46,7 @@ export default Index;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    allMdx(
       limit: 3
       sort: { fields: [fields___date], order: DESC }
     ) {

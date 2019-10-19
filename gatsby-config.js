@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
-      },
+        extensions: [`.mdx`, `.md`]
+      }
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -51,12 +51,10 @@ module.exports = {
               maxWidth: 690
             }
           },
-          {
-            resolve: "gatsby-remark-responsive-iframe"
-          },
-          "gatsby-remark-copy-linked-files",
+          { resolve: "gatsby-remark-responsive-iframe" },
+          { resolve: "gatsby-remark-copy-linked-files" },
           "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs"
+          { resolve: "gatsby-remark-prismjs" }
         ]
       }
     },

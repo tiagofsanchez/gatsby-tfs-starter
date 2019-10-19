@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import { Styled } from "theme-ui";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
@@ -14,7 +15,7 @@ export default class PostTemplate extends React.Component {
   render() {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
-    const postNode = data.markdownRemark;
+    const postNode = data.mdx;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -22,6 +23,9 @@ export default class PostTemplate extends React.Component {
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
+
+    console.log(postNode.rawBody);
+
     return (
       <Layout>
         <Helmet>
@@ -30,13 +34,14 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
           <Styled.h1>{post.title}</Styled.h1>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <MDXRenderer>{postNode.body}</MDXRenderer>  
           <div className="post-meta">
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
-          <UserInfo config={config} />
-          <Disqus postNode={postNode} />
+          {/* this is for Disqus implemetation (that I am not using) */}
+          {/* <UserInfo config={config} />
+          <Disqus postNode={postNode} /> */}
         </div>
       </Layout>
     );
@@ -46,8 +51,9 @@ export default class PostTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      rawBody
+      body
       timeToRead
       excerpt
       frontmatter {

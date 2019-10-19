@@ -8,7 +8,7 @@ import config from "../../data/SiteConfig";
 
 class Blog extends React.Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.allMdx.edges;
     return (
       <Layout>
         <Helmet title={config.siteTitle} />
@@ -24,15 +24,11 @@ export default Blog;
 /* eslint no-undef: "off" */
 export const blogQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [fields___date], order: DESC }
-    ) {
+    allMdx(limit: 2000, sort: {order: DESC, fields: frontmatter___date}) {
       edges {
         node {
           fields {
             slug
-            date (formatString: "MMMM Do, YYYY")
           }
           excerpt
           timeToRead

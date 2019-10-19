@@ -38,7 +38,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: `/blog${value}`,
     })}}
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === "Mdx") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
@@ -82,7 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const markdownQueryResult = await graphql(
     `
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
               fields {
@@ -109,7 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = markdownQueryResult.data.allMdx.edges;
 
   postsEdges.sort((postA, postB) => {
     const dateA = moment(

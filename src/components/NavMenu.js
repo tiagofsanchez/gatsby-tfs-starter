@@ -32,7 +32,6 @@ class NavMenu extends React.Component {
     const { scrolled } = this.state
     const { menuLinks } = this.props
 
-    console.log(menuLinks)
 
     let shadow = `none`;
     if( scrolled === true ) { 
@@ -71,6 +70,7 @@ class NavMenu extends React.Component {
               {menuLinks.map(link => {
                 return (
                   <Styled.h3
+                    key={link}
                     as={Link}
                     to={link.url}
                     sx={{ mr: "20px", textDecoration: `none`, color: `primary` }}
