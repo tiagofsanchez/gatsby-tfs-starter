@@ -70,7 +70,7 @@ class NavMenu extends React.Component {
               {menuLinks.map(link => {
                 return (
                   <Styled.h3
-                    key={link}
+                    key={link.url}
                     as={Link}
                     to={link.url}
                     sx={{ mr: "20px", textDecoration: `none`, color: `primary` }}

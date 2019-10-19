@@ -65,7 +65,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        date
+        date(formatString: "MMMM Do, YYYY")
       }
     }
   }
