@@ -24,8 +24,6 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
-    console.log(postNode.rawBody);
-
     return (
       <Layout>
         <Helmet>

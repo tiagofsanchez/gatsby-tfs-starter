@@ -1,3 +1,4 @@
+
 const config = {
   siteTitle: "Gatsby Advanced Starter", // Site title.
   siteTitleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
@@ -24,18 +25,16 @@ const config = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-advanced-starter",
-      iconClassName: "fa fa-github"
+      url: "https://github.com/tiagofsanchez/tfs-starter",
     },
     {
-      label: "Twitter",
-      url: "https://twitter.com/Vagr9K",
-      iconClassName: "fa fa-twitter"
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/tiago-formosinho-sanchez-3764225/"
+      
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
-      iconClassName: "fa fa-envelope"
+      url: "mailto:tiagofsanchez@gmail.com",
     }
   ],
   menuLinks: [
