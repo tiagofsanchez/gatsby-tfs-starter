@@ -24,16 +24,16 @@ const config = {
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
-      label: "GitHub",
+      label: "github",
       url: "https://github.com/tiagofsanchez/tfs-starter",
     },
     {
-      label: "LinkedIn",
+      label: "linkedin",
       url: "https://www.linkedin.com/in/tiago-formosinho-sanchez-3764225/"
       
     },
     {
-      label: "Email",
+      label: "email",
       url: "mailto:tiagofsanchez@gmail.com",
     }
   ],
@@ -69,5 +69,6 @@ if (config.siteUrl.substr(-1) === "/")
 // Make sure siteRss has a starting forward slash
 if (config.siteRss && config.siteRss[0] !== "/")
   config.siteRss = `/${config.siteRss}`;
+
 
 module.exports = config;

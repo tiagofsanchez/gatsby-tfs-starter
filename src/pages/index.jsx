@@ -4,8 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import SimplePostListing from "../components/SimplePostListing";
 import SEO from "../components/SEO/SEO";
+import AvatarLinks from '../components/AvatarLinks';
 import config from "../../data/SiteConfig";
-import SiteConfig from '../../data/SiteConfig';
+
 
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui";
@@ -13,7 +14,7 @@ import { Styled, jsx } from "theme-ui";
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMdx.edges;
-    const { userLinks } = SiteConfig
+    const { userLinks } = config
     
 
 
@@ -41,6 +42,7 @@ class Index extends React.Component {
             about that and other related stuff here! Basically, sharing what
             I am learning!
           </Styled.p>
+          <AvatarLinks />
           {userLinks.map(data => (
             <Styled>{data.label}</Styled>
           ))}
