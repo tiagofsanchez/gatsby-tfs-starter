@@ -37,12 +37,12 @@ class Index extends React.Component {
               </Styled.h1>
             </Styled.h1>
           </div>
-          <Styled.p>
-            I am learning to code in ReactJS (from scratch) and I write
-            about that and other related stuff here! Basically, sharing what
-            I am learning!
-          </Styled.p>
           <AvatarLinks />
+          <Styled.p>
+            I am learning to code ReactJS (from scratch) and I have built this starter 
+            to learn our Gatsby works and to build by blog! 
+          </Styled.p>
+          
         </section>
         <section>
           <Styled.h1>Latest posts</Styled.h1>
@@ -62,7 +62,7 @@ export default Index;
 export const pageQuery = graphql`
   query IndexQuery {
     allMdx(
-      limit: 3
+      limit: 5
       sort: { fields: [fields___date], order: DESC }
     ) {
       edges {

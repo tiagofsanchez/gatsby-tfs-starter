@@ -73,7 +73,7 @@ class NavMenu extends React.Component {
                     key={link.url}
                     as={Link}
                     to={link.url}
-                    sx={{ mr: "20px", textDecoration: `none`, color: `primary` }}
+                    sx={{ mr: "10px", textDecoration: `none`, color: `primary` }}
                   >
                     {link.name}
                   </Styled.h3>

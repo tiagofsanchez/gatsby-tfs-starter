@@ -4,7 +4,7 @@ import linkedin from "../images/linkedin.svg";
 import mail from "../images/mail.svg";
 import siteConfig from "../../data/SiteConfig";
 /** @jsx jsx */
-import { Styled, jsx } from 'theme-ui'
+import { Styled, jsx } from "theme-ui";
 
 const icons = [
   { label: "linkedin", icon: linkedin },
@@ -36,20 +36,28 @@ const AvatarLinks = () => {
       {newUserLinks.map(element => {
         return (
           <div key={element.url} sx={{ mx: 2 }}>
-            <a href={element.url} target="_blank" >
-              <img src={element.icon} sx={{ width: "30px", bg: `muted`, borderRadius: "10px", p: 1 }} />
+            <a href={element.url} target="_blank">
+              <img
+                src={element.icon}
+                sx={{
+                  width: "30px",
+                  bg: `muted`,
+                  borderRadius: "10px",
+                  p: 1,
+                  ":hover": { bg: `pink` }
+                }}
+              />
             </a>
           </div>
         );
       })}
     </div>
-  )
+  );
 
   return (
     <div sx={{ margin: `auto`, textAlign: `center`, display: `table` }}>
       {iconsAndLinks}
     </div>
   );
-
 };
 export default AvatarLinks;
