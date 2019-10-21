@@ -6,6 +6,7 @@ import SimplePostListing from "../components/SimplePostListing";
 import SEO from "../components/SEO/SEO";
 import AvatarLinks from '../components/AvatarLinks';
 import config from "../../data/SiteConfig";
+import AllCategories from "../components/AllCategories";
 
 
 /** @jsx jsx */
@@ -43,6 +44,9 @@ class Index extends React.Component {
             to learn our Gatsby works and to build by blog! 
           </Styled.p>
           
+        </section>
+        <section>
+          <AllCategories />
         </section>
         <section>
           <Styled.h1>Latest posts</Styled.h1>
