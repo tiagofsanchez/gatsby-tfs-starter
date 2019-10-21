@@ -3,11 +3,13 @@ import github from "../images/github.svg";
 import linkedin from "../images/linkedin.svg";
 import mail from "../images/mail.svg";
 import siteConfig from "../../data/SiteConfig";
+/** @jsx jsx */
+import { Styled, jsx } from 'theme-ui'
 
 const icons = [
-  { label: "linkedin", icon: { linkedin } },
-  { label: "github", icon: { github } },
-  { label: "email", icon: { mail } }
+  { label: "linkedin", icon: linkedin },
+  { label: "github", icon: github },
+  { label: "email", icon: mail }
 ];
 
 const AvatarLinks = () => {
@@ -29,14 +31,25 @@ const AvatarLinks = () => {
     });
   });
 
-  return (
-    <div>
+  const iconsAndLinks = (
+    <div sx={{ display: `flex` }}>
       {newUserLinks.map(element => {
-        return <img src={element.icon}/>;
+        return (
+          <div key={element.url} sx={{ mx: 2 }}>
+            <a href={element.url} target="_blank" >
+              <img src={element.icon} sx={{ width: "30px", bg: `muted`, borderRadius: "10px", p: 1 }} />
+            </a>
+          </div>
+        );
       })}
-      <div>something is working</div>
-      <img src={mail} />
+    </div>
+  )
+
+  return (
+    <div sx={{ margin: `auto`, textAlign: `center`, display: `table` }}>
+      {iconsAndLinks}
     </div>
   );
+
 };
 export default AvatarLinks;

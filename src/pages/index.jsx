@@ -43,9 +43,6 @@ class Index extends React.Component {
             I am learning!
           </Styled.p>
           <AvatarLinks />
-          {userLinks.map(data => (
-            <Styled>{data.label}</Styled>
-          ))}
         </section>
         <section>
           <Styled.h1>Latest posts</Styled.h1>
