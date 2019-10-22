@@ -5,6 +5,7 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import AvatarLinks from "../components/AvatarLinks";
 
 class Blog extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class Blog extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO />
         <PostListing postEdges={postEdges} />
+        <AvatarLinks />
       </Layout>
     );
   }
