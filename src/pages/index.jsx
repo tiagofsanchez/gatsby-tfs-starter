@@ -31,11 +31,11 @@ class Index extends React.Component {
             />
             <Styled.h1 sx={{ color: `text` }}>
               Ola, I'm{" "}
-              <Styled.h1
-                sx={{ display: `inline`, borderBottom: `solid 2px ` }}
+              <Styled
+                sx={{ display: `inline`, borderBottom: `solid 4px`, fontSize:32, color: `primary` }}
               >
                 Tiago
-              </Styled.h1>
+              </Styled>
             </Styled.h1>
           </div>
           <AvatarLinks />
@@ -45,15 +45,13 @@ class Index extends React.Component {
           </Styled.p>
           
         </section>
-        <section>
+        <section sx={{mt:`60px`}}>
+          <Styled.h1>I write about</Styled.h1>
           <AllCategories />
         </section>
-        <section>
-          <Styled.h1>Latest posts</Styled.h1>
+        <section sx={{mt:`60px`}}>
+          <Styled.h1>Check out my latest posts</Styled.h1>
           <SimplePostListing postEdges={postEdges} />
-        </section>
-        <section>
-          <Styled.h1 />
         </section>
       </Layout>
     );

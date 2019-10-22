@@ -1,25 +1,24 @@
-const purple60 = `#663399`
-const purple30 = `#D9BAE8`
+
+
 const grey90 = `#232129`
 const black80 = `#1B1F23`
 const white = `#fff`
 const lightWhite = `rgba(255, 255, 255, 0.86)`
 const opaqueLightYellow = `rgba(255, 229, 100, 0.2)`
 const opaqueLightWhite = `hsla(0, 0%, 100%, 0.2)`
-
-
 const darkPink = `#d23669`
 const pink = `pink`
 const blueGray = `#282c35`
 const lightblue = `#a5a4a6`
 const lightGray = '#eee'
+const gray = `#CCCCCC`
 
 export default {
   text: blueGray,
   background: lightGray,
   primary: darkPink,
   secondary: black80,
-  muted: lightGray,
+  muted: gray,
   highlight: opaqueLightYellow,
   heading: grey90,
   prism: {

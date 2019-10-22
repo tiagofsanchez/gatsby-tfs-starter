@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import _ from "lodash";
 import { Link } from 'gatsby'
 import PostTages from './PostTags';
@@ -16,8 +16,15 @@ const PostHeader = (props) => {
       <div sx={{ display: `flex`, flexDirection: `column` }}>
         <small>
           {post.date} / {post.timeToRead} minute(s) reading time
-          </small>
-        <div sx={{ display: `flex`, flexWrap: `wrap`, mt: 2 , alignItems: `baseline`}}>
+        </small>
+        <div
+          sx={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            mt: 2,
+            alignItems: `baseline`
+          }}
+        >
           <Styled.p
             as={Link}
             sx={{
@@ -28,7 +35,7 @@ const PostHeader = (props) => {
               display: `inline-block`,
               px: `4px`,
               borderRadius: `5px`,
-             p:1,
+              p: 1,
               mb: `10px`,
               mr: 2
             }}
