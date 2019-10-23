@@ -16,17 +16,12 @@ export default {
   },
   code: {
     fontFamily: `monospace`,
-    // from typography overrideThemeStyles
-    // "h1 code, h2 code, h3 code, h4 code, h5 code, h6 code"
     fontSize: `inherit`,
   },
   inlineCode: {
     borderRadius: `0.3em`,
-    color: `secondary`,
-    bg: `highlight`,
-    paddingTop: `0.15em`,
-    paddingBottom: `0.05em`,
-    paddingX: `0.2em`,
+    bg: `muted`,
+    p: `0.3em`,
   },
   // from typography overrideThemeStyles
   h1: {
@@ -55,10 +50,10 @@ export default {
   },
   blockquote: {
     color: `inherit`,
-    borderLeftColor: `inherit`,
+    borderLeft: `solid 5px`,
+    paddingLeft: `10px`,
+    borderColor: `primary`,
     opacity: 0.8,
-    "&.translation": {
-      fontSize: `1em`,
-    },
+    fontStyle: `italic`
   },
 }
