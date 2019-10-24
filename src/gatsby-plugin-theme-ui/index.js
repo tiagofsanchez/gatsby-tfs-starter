@@ -3,8 +3,9 @@ import colors from "./colors";
 import prism from "./prism";
 
 
+
 export default {
-  breakpoints: ['40em', '52em', '64em'],
+  breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
     container: 600
@@ -12,7 +13,7 @@ export default {
   fonts: {
     body: "system-ui, sans-serif",
     heading: "Georgia, serif",
-    monospace: "Menlo, monospace"
+    monospace: "Georgia, serif"
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
@@ -29,6 +30,6 @@ export default {
     caps: "0.2em"
   },
   styles,
-  prism,
-  colors,
+  ...prism,  
+  colors
 };

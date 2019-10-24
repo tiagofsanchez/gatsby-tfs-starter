@@ -7,16 +7,16 @@ export default {
     fontFamily: `monospace`,
     tabSize: 4,
     hyphens: `none`,
-    marginBottom: 2,
+    marginBottom: 3,
     color: `white`,
     bg: `prism.background`,
     overflow: `auto`,
-    borderRadius: 10,
+    borderRadius: 5,
     p: 3,
   },
   code: {
     fontFamily: `monospace`,
-    fontSize: `inherit`,
+    fontSize: `15px`,
   },
   inlineCode: {
     borderRadius: `0.3em`,
@@ -54,6 +54,7 @@ export default {
     paddingLeft: `10px`,
     borderColor: `primary`,
     opacity: 0.8,
-    fontStyle: `italic`
+    fontStyle: `italic`,
+
   },
 }

@@ -49,7 +49,8 @@ class NavMenu extends React.Component {
             height: `60px`,
             backgroundColor: `background`,
             boxShadow: shadow,
-            m: `auto`
+            m: `auto`,
+            zIndex: 100,
           }}
         >
           <div
