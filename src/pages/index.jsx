@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql , Link } from "gatsby";
 import Layout from "../layout";
 import SimplePostListing from "../components/SimplePostListing";
 import SEO from "../components/SEO/SEO";
@@ -32,7 +32,18 @@ class Index extends React.Component {
             <Styled.h1 sx={{ color: `text` }}>
               Ola, I'm{" "}
               <Styled
-                sx={{ display: `inline`, borderBottom: `solid 4px`, fontSize:32, color: `primary` }}
+                as={Link}
+                to={"/about"}
+                sx={{
+                  display: `inline`,
+                  borderBottom: `solid 4px`,
+                  fontSize: 32,
+                  color: `primary`,
+                  textDecoration: `none`,
+                  ":hover": {
+                    bg: `muted`
+                  }
+                }}
               >
                 Tiago
               </Styled>
@@ -40,18 +51,36 @@ class Index extends React.Component {
           </div>
           <AvatarLinks />
           <Styled.p>
-            I am learning to code ReactJS (from scratch) and I have built this starter 
-            to learn our Gatsby works and to build by blog! 
+            I am learning to code ReactJS (from scratch) and I have built
+            this starter to learn our Gatsby works and to build by blog!
           </Styled.p>
-          
         </section>
-        <section sx={{mt:`60px`}}>
+        <section sx={{ mt: `60px` }}>
           <Styled.h1>I write about</Styled.h1>
           <AllCategories />
         </section>
-        <section sx={{mt:`60px`}}>
+        <section sx={{ my: `40px` }}>
           <Styled.h1>Check out my latest posts</Styled.h1>
           <SimplePostListing postEdges={postEdges} />
+        </section>
+        <section>
+          <Styled
+            as={Link}
+            to={'/blog'}
+            sx={{
+              margin: `auto`,
+              textAlign: `center`,
+              color: `primary`,
+              borderBottom: `solid 3px`,
+              textDecoration: `none`,
+              fontSize: 26,
+              ":hover": {
+                bg: `muted`
+              }
+            }}
+          >
+            More posts...
+          </Styled>
         </section>
       </Layout>
     );
