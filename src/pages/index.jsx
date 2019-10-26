@@ -52,7 +52,7 @@ class Index extends React.Component {
           <AvatarLinks />
           <Styled.p>
             I am learning to code ReactJS (from scratch) and I have built
-            this starter to learn our Gatsby works and to build by blog!
+            this starter to learn how Gatsby works and to build by blog!
           </Styled.p>
         </section>
         <section sx={{ mt: `60px` }}>
