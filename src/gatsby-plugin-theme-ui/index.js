@@ -30,6 +30,6 @@ export default {
     caps: "0.2em"
   },
   styles,
-  ...prism,  
+  prism,
   colors
 };

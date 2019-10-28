@@ -25,7 +25,7 @@ export default {
   },
   ".tag, .operator, .keyword": {
     color: `prism.tag`,
-  },
+  },  
   ".boolean": {
     color: `prism.boolean`,
   },
@@ -35,4 +35,7 @@ export default {
   ".namespace": {
     color: `prism.namespace`,
   },
+  ".background":{
+    color: `pink`
+  }
 }

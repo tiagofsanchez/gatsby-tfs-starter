@@ -1,5 +1,3 @@
-
-
 const grey90 = `#232129`
 const black80 = `#1B1F23`
 const white = `#fff`
