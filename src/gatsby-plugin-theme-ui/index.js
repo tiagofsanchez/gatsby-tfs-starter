@@ -29,5 +29,5 @@ export default {
   },
   styles,
   colors,
-  prism 
+  prism,
 };
