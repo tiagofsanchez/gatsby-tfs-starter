@@ -1,4 +1,3 @@
-import prism from './prism';
 
 export default {
   root: {
@@ -15,18 +14,6 @@ export default {
     overflow: `auto`,
     borderRadius: 5,
     p: 3,
-    ".variable": {
-      color: `green`,
-    },
-    ".number": {
-      color: `pink`,
-    },
-    ".builtin, .char, .constant, .function": {
-      color: `pink`,
-    },
-    ".punctuation, .selector, .doctype": {
-      color: `pink`,
-    },
   },
   code: {
     fontFamily: `monospace`,
