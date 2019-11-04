@@ -1,14 +1,12 @@
 import styles from "./styles";
 import colors from "./colors";
-import prism from "./prism";
-
-
+import prism from "./prism"
 
 export default {
   breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
-    container: 600
+    container: 700
   },
   fonts: {
     body: "system-ui, sans-serif",
@@ -30,6 +28,6 @@ export default {
     caps: "0.2em"
   },
   styles,
-  prism,
-  colors
+  colors,
+  prism 
 };

@@ -34,8 +34,5 @@ export default {
   },
   ".namespace": {
     color: `prism.namespace`,
-  },
-  ".background":{
-    color: `pink`
   }
 }

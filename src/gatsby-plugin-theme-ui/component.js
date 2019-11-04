@@ -1,5 +1,5 @@
 /** @jsx jsx */
-/* import { jsx } from "theme-ui"
+import { jsx } from "theme-ui"
 import { preToCodeBlock } from "mdx-utils"
 import PrismCodeBlock from "@theme-ui/prism"
 
@@ -21,11 +21,4 @@ const CodeBlock = preProps => {
 
 export default {
   pre: CodeBlock,
-} */
-
-// src/gatsby-plugin-theme-ui/components.js
-import Prism from '@theme-ui/prism'
-export default {
-  pre: props => props.children,
-  code: Prism,
-}
+} 
