@@ -2,7 +2,7 @@ const urljoin = require("url-join");
 const config = require("./data/SiteConfig");
 
 module.exports = {
-  pathPrefix: "/gatsby-tfs-starter",
+  pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     rssMetadata: {
