@@ -16,7 +16,6 @@ export default class MainLayout extends React.Component {
       <Styled
         sx={{
           fontFamily: `body`,
-          width: ["90%", `container`, `container`],
           m: `auto`
         }}
       >
