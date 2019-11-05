@@ -16,7 +16,8 @@ export default class MainLayout extends React.Component {
       <Styled
         sx={{
           fontFamily: `body`,
-          m: `auto`
+          m: `auto`,
+          maxWidth: `container`
         }}
       >
         <Helmet>
