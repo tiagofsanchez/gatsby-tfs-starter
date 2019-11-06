@@ -1,6 +1,6 @@
 import styles from "./styles";
 import colors from "./colors";
-import prism from "./prism"
+import prism from '@theme-ui/prism/presets/theme-ui'
 
 export default {
   breakpoints: ["40em", "52em", "64em"],
