@@ -4,7 +4,7 @@ Created this Repo to build a new started based on the [Gatsby Advanced Starter](
 
 Styled with `theme-ui` inspired on [Dan Abramov's](https://overreacted.io/) blog, but slightly different. 
 
-[Demo website.](https://vagr9k.github.io/gatsby-advanced-starter/)
+[Demo website.](https://gatsby-tfs-starter.netlify.com/)
 
 
 ## Getting Started
