@@ -26,7 +26,7 @@ export default Blog;
 /* eslint no-undef: "off" */
 export const blogQuery = graphql`
   query BlogQuery {
-    allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
+    allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC } , filter: {frontmatter: {publish: {eq: "yes"}}}) {
       edges {
         node {
           fields {

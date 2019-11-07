@@ -7,6 +7,7 @@ tags:
     - test
     - something
     - tagging
+publish: "yes"
 ---
 # Autolyci eminus retenta
 

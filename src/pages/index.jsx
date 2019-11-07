@@ -95,6 +95,7 @@ export const pageQuery = graphql`
     allMdx(
       limit: 5
       sort: { fields: [fields___date], order: DESC }
+      filter: {frontmatter: {publish: {eq: "yes"}}}
     ) {
       edges {
         node {
