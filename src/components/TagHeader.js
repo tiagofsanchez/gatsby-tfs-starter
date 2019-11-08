@@ -15,7 +15,7 @@ const TagHeader = props => {
       }}
     >
       <Styled.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
-        Posts tagged as
+        Post(s) tagged as
       </Styled.h2>
       <Styled.h3
         sx={{

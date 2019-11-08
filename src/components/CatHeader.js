@@ -15,7 +15,7 @@ const CatHeader = props => {
       }}
     >
       <Styled.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
-        Posts category as
+        Post(s) category as
       </Styled.h2>
       <Styled.h3
         sx={{

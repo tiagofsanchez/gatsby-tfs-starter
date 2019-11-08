@@ -1,50 +1,47 @@
-import prism from '@theme-ui/prism/presets/oceanic-next'
+import prism from "@theme-ui/prism/presets/oceanic-next";
 
-const grey90 = `#232129`
-const black80 = `#1B1F23`
-const white = `#fff`
-const lightWhite = `rgba(255, 255, 255, 0.86)`
-const opaqueLightYellow = `rgba(255, 229, 100, 0.2)`
-const opaqueLightWhite = `hsla(0, 0%, 100%, 0.2)`
-const darkPink = `#d23669`
-const pink = `pink`
-const blueGray = `#282c35`
-const lightblue = `#a5a4a6`
-const lightGray = '#eee'
-const gray = `#CCCCCC`
-
+const grey90 = `#232129`;
+const black80 = `#1B1F23`;
+const white = `#fff`;
+const lightWhite = `rgba(255, 255, 255, 0.86)`;
+const opaqueLightYellow = `rgba(255, 229, 100, 0.2)`;
+const opaqueLightWhite = `hsla(0, 0%, 100%, 0.2)`;
+const darkPink = `#d23669`;
+const pink = `pink`;
+const blueGray = `#282c35`;
+const lightblue = `#a5a4a6`;
+const lightGray = "#eee";
+const gray = `#CCCCCC`;
 
 export default {
-  breakpoints: ["40em", "52em", "64em"],
+  //theme
+
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
-    container: 700,
-    wide: 1280,
+    container: 710
   },
   fonts: {
-    body: 'system-ui, sans-serif',
-    monospace: '"Roboto Mono", Menlo, monospace',
+    body: "system-ui, sans-serif",
+    monospace: '"Roboto Mono", Menlo, monospace'
   },
   lineHeights: {
     body: 1.625,
-    heading: 1.25,
+    heading: 1.25
   },
   fontWeights: {
     body: 400,
     heading: 800,
-    bold: 700,
+    bold: 700
   },
-  fontSizes: [
-    14, 16, 18, 20, 24, 32, 48, 64, 72, 96
-  ],
+  fontSizes: [14, 16, 18, 20, 24, 32, 48, 64, 72, 96],
   letterSpacing: {
     body: "normal",
     caps: "0.2em"
   },
-
+  //styles
   styles: {
     root: {
-      fontFamily: `body`,
+      fontFamily: `body`
     },
     pre: {
       variant: `prism`,
@@ -57,40 +54,38 @@ export default {
       overflow: `auto`,
       borderRadius: 5,
       p: 3,
-      boxShadow:`1px 2px 10px rgba(0, 0, 0, 0.5)`
+      boxShadow: `1px 2px 10px rgba(0, 0, 0, 0.5)`
     },
     code: {
-      fontFamily: `monospace`,
+      fontFamily: `monospace`
     },
     inlineCode: {
       borderRadius: `0.3em`,
       bg: `muted`,
-      p: `0.3em`,
+      p: `0.3em`
     },
     // from typography overrideThemeStyles
     h1: {
       fontSize: 32,
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      color: 'primary',
+      fontFamily: "heading",
+      fontWeight: "heading",
+      color: "primary",
       mt: 4,
-      mb: 4,
+      mb: 4
     },
     a: {
-      color: `primary`,
+      color: `primary`
     },
     p: {
       fontWeight: `body`,
       lineHeight: `body`,
-      letterSpacing: `body`,
-      code: {
-        fontSize: `inherit`,
-      },
+      letterSpacing: `body`
     },
     li: {
-      code: {
-        fontSize: `inherit`,
-      },
+      fontSize: `body`,
+      fontWeight: `body`,
+      lineHeight: `body`,
+      letterSpacing: `body`
     },
     blockquote: {
       color: `inherit`,
@@ -98,10 +93,10 @@ export default {
       paddingLeft: `10px`,
       borderColor: `primary`,
       opacity: 0.8,
-      fontStyle: `italic`,
-    },
+      fontStyle: `italic`
+    }
   },
-
+  //Colors
   colors: {
     text: blueGray,
     background: lightGray,
@@ -111,7 +106,7 @@ export default {
     highlight: opaqueLightYellow,
     heading: grey90,
     prism: {
-      background: `#011627`,
+      background: `#011627`
     },
     modes: {
       dark: {
@@ -121,10 +116,9 @@ export default {
         secondary: lightWhite,
         muted: opaqueLightWhite,
         highlight: lightblue,
-        heading: white,
-      },
-    },
+        heading: white
+      }
+    }
   },
-
-  prism,
+  prism
 };

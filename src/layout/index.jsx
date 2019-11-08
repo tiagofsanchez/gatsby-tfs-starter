@@ -3,10 +3,8 @@ import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import NavMenu from "../components/NavMenu";
 
-
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui";
-
 
 export default class MainLayout extends React.Component {
   render() {
@@ -17,7 +15,8 @@ export default class MainLayout extends React.Component {
         sx={{
           fontFamily: `body`,
           m: `auto`,
-          maxWidth: `container`
+          maxWidth: `container`,
+          width: ["90%", "100%", "100%"]
         }}
       >
         <Helmet>

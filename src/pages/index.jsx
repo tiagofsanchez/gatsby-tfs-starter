@@ -1,13 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql , Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import SimplePostListing from "../components/SimplePostListing";
 import SEO from "../components/SEO/SEO";
-import AvatarLinks from '../components/AvatarLinks';
+import AvatarLinks from "../components/AvatarLinks";
 import config from "../../data/SiteConfig";
 import AllCategories from "../components/AllCategories";
-
 
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui";
@@ -15,9 +14,7 @@ import { Styled, jsx } from "theme-ui";
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMdx.edges;
-    const { userLinks } = config
-    
-
+    const { userLinks } = config;
 
     return (
       <Layout>
@@ -41,7 +38,9 @@ class Index extends React.Component {
                   color: `primary`,
                   textDecoration: `none`,
                   ":hover": {
-                    bg: `muted`
+                    bg: `muted`,
+                    p: 1,
+                    borderRadius: `5px`
                   }
                 }}
               >
@@ -51,8 +50,8 @@ class Index extends React.Component {
           </div>
           <AvatarLinks />
           <Styled.p>
-            I am learning to code ReactJS (from scratch) and I have built
-            this starter to learn how Gatsby works and to build by blog!
+            I am learning to code ReactJS (from scratch) and I have built this
+            starter to learn how Gatsby works and to build by blog!
           </Styled.p>
         </section>
         <section sx={{ mt: `60px` }}>
@@ -66,7 +65,7 @@ class Index extends React.Component {
         <section>
           <Styled
             as={Link}
-            to={'/blog'}
+            to={"/blog"}
             sx={{
               margin: `auto`,
               textAlign: `center`,
@@ -75,7 +74,9 @@ class Index extends React.Component {
               textDecoration: `none`,
               fontSize: 26,
               ":hover": {
-                bg: `muted`
+                bg: `muted`,
+                p: 1,
+                borderRadius: `5px`
               }
             }}
           >
@@ -95,7 +96,7 @@ export const pageQuery = graphql`
     allMdx(
       limit: 5
       sort: { fields: [fields___date], order: DESC }
-      filter: {frontmatter: {publish: {eq: "yes"}}}
+      filter: { frontmatter: { publish: { eq: "yes" } } }
     ) {
       edges {
         node {
