@@ -2,8 +2,8 @@ import React from "react";
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui";
 
-const TagHeader = props => {
-  const { tag } = props;
+const CatHeader = props => {
+  const { category } = props;
   return (
     <Styled
       sx={{
@@ -15,22 +15,25 @@ const TagHeader = props => {
       }}
     >
       <Styled.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
-        Posts tagged as
+        Posts category as
       </Styled.h2>
       <Styled.h3
         sx={{
-          color: `text`,
-          mr: 1,
-          boxShadow: `0px 1px 5px rgba(0, 0, 0, 0.5)`,
-          p: `5px`,
-          borderRadius: `4px`,
-          boxSizing: `content-box`
+          color: `primary`,
+          textDecoration: `none`,
+          border: `solid 1px`,
+          boxSizing: `content-box`,
+          display: `inline-block`,
+          px: `4px`,
+          borderRadius: `5px`,
+          p: 1,
+          mr: 2
         }}
       >
-        {tag}
+        {category}
       </Styled.h3>
     </Styled>
   );
 };
 
-export default TagHeader;
+export default CatHeader;

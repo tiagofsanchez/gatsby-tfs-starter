@@ -3,19 +3,21 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
+import CatHeader from "../components/CatHeader";
 import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends React.Component {
   render() {
     const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMdx.edges;
-    console.log(category)
+    console.log(category);
     return (
       <Layout>
         <Helmet
           title={`Posts in category "${category}" | ${config.siteTitle}`}
         />
-          <PostListing postEdges={postEdges} />
+        <CatHeader category={category} />
+        <PostListing postEdges={postEdges} />
       </Layout>
     );
   }
