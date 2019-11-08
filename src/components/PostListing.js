@@ -24,7 +24,6 @@ class PostListing extends React.Component {
   }
 
 
-
   render() {
 
     const postList = this.getPostList();

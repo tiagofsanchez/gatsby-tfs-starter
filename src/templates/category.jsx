@@ -9,6 +9,7 @@ export default class CategoryTemplate extends React.Component {
   render() {
     const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMdx.edges;
+    console.log(category)
     return (
       <Layout>
         <Helmet
