@@ -2,15 +2,34 @@ import React from "react";
 import siteConfig from "../../../data/SiteConfig";
 
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { jsx, Styled } from "theme-ui";
 
+const SmallAvatar = props => {
+  const { avatar } = siteConfig;
+  const { siteTitle } = siteConfig;
 
-const SmallAvatar = props => { 
-    return { 
-        <>
-        <img src={avatar.photo} sx={{ width: 100, borderRadius: 999 }} />
-        </>
-    }
-}
+  return (
+    <>
+      <Styled.h3
+        sx={{
+          mt: 5,
+          color: `primary`,
+          mb: 0,
+          borderTop: `1px solid`,
+          pt: "15px"
+        }}
+      >
+        {siteTitle}
+      </Styled.h3>
+      <div sx={{ display: `flex`, alignItems: `center` }}>
+        <img
+          src={avatar.photo}
+          sx={{ width: 70, height: 70, borderRadius: 999, mr: `15px` }}
+        />
+        <Styled.p>{avatar.description}</Styled.p>
+      </div>
+    </>
+  );
+};
 
-export default
+export default SmallAvatar;

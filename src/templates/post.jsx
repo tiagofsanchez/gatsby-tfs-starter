@@ -5,13 +5,15 @@ import { graphql } from "gatsby";
 import { Styled, jsx } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
 import PostHeader from "../components/PostHeader";
-import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import SmallAvatar from "../components/Avatar/SmallAvatar";
+
+//if you want to use Discus
+import UserInfo from "../components/UserInfo/UserInfo";
+import Disqus from "../components/Disqus/Disqus";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -50,9 +52,10 @@ export default class PostTemplate extends React.Component {
           <Styled.h1 sx={{ mb: 0, fontSize: 60 }}>{post.title}</Styled.h1>
           <PostHeader post={postWip[0]} />
           <MDXRenderer>{postNode.body}</MDXRenderer>
-          <div className="post-meta">
-            <SocialLinks postPath={slug} postNode={postNode} />
+          <div sx={{ mt: "40px" }}>
+            <SmallAvatar />
           </div>
+          {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
           {/* this is for Disqus implemetation (that I am not using...but fell free to use) */}
           {/* <UserInfo config={config} />
           <Disqus postNode={postNode} /> */}
