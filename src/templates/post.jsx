@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 /** @jsx jsx */
-import { Styled, jsx } from 'theme-ui'
+import { Styled, jsx } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
@@ -12,7 +12,6 @@ import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -27,7 +26,20 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
-    console.log(post)  
+    //transforming my data from post into and Array so that I can loop through it
+    const postNodeWip = [];
+    postNodeWip.push(postNode);
+
+    const postWip = [];
+    postNodeWip.forEach(post => {
+      postWip.push({
+        category: post.frontmatter.category,
+        timeToRead: post.timeToRead,
+        tags: post.frontmatter.tags,
+        date: post.fields.date
+      });
+    });
+
     return (
       <Layout>
         <Helmet>
@@ -35,11 +47,10 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Styled.h1 sx={{mb:0}}>{post.title}</Styled.h1>
-          <PostHeader post={post}/>
-          <MDXRenderer>{postNode.body}</MDXRenderer>  
+          <Styled.h1 sx={{ mb: 0, fontSize: 60 }}>{post.title}</Styled.h1>
+          <PostHeader post={postWip[0]} />
+          <MDXRenderer>{postNode.body}</MDXRenderer>
           <div className="post-meta">
-            <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
           {/* this is for Disqus implemetation (that I am not using...but fell free to use) */}
