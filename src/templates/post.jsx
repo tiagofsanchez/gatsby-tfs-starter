@@ -1,11 +1,13 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import { Styled } from "theme-ui";
+/** @jsx jsx */
+import { Styled, jsx } from 'theme-ui'
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
+import PostHeader from "../components/PostHeader";
 import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
@@ -25,6 +27,7 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
+    console.log(post)  
     return (
       <Layout>
         <Helmet>
@@ -32,7 +35,8 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Styled.h1>{post.title}</Styled.h1>
+          <Styled.h1 sx={{mb:0}}>{post.title}</Styled.h1>
+          <PostHeader post={post}/>
           <MDXRenderer>{postNode.body}</MDXRenderer>  
           <div className="post-meta">
             <PostTags tags={post.tags} />
