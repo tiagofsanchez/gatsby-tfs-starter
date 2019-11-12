@@ -12,7 +12,7 @@ const icons = [
   { label: "email", icon: mail }
 ];
 
-const AvatarLinks = (props) => {
+const AvatarLinks = props => {
   const { userLinks } = siteConfig;
   const { size } = props;
 
@@ -32,10 +32,10 @@ const AvatarLinks = (props) => {
     });
   });
 
-  let iconSize = "30px"
-  if (size==="small") { 
-    iconSize = "20px"
-  } 
+  let iconSize = "30px";
+  if (size === "small") {
+    iconSize = "20px";
+  }
 
   const iconsAndLinks = (
     <div sx={{ display: `flex` }}>
