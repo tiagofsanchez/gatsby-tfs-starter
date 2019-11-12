@@ -17,7 +17,8 @@ const SmallAvatar = props => {
           color: `primary`,
           mb: 0,
           borderTop: `1px solid`,
-          pt: "15px"
+          pt: "15px",
+          textAlign: `center`
         }}
       >
         {siteTitle}
@@ -31,7 +32,7 @@ const SmallAvatar = props => {
         <Styled.p>{avatar.description}</Styled.p>
       </div>
       <div sx={{ textAlign: `left` }}>
-        <AvatarLinks sx={{ display: `inline-block` }} size={"small"} />
+        <AvatarLinks size={"small"} />
       </div>
     </>
   );
