@@ -12,8 +12,9 @@ const icons = [
   { label: "email", icon: mail }
 ];
 
-const AvatarLinks = () => {
+const AvatarLinks = (props) => {
   const { userLinks } = siteConfig;
+  const { size } = props;
 
   const newUserLinks = [];
   icons.forEach(element => {
@@ -31,6 +32,11 @@ const AvatarLinks = () => {
     });
   });
 
+  let iconSize = "30px"
+  if (size==="small") { 
+    iconSize = "20px"
+  } 
+
   const iconsAndLinks = (
     <div sx={{ display: `flex` }}>
       {newUserLinks.map(element => {
@@ -40,7 +46,7 @@ const AvatarLinks = () => {
               <img
                 src={element.icon}
                 sx={{
-                  width: "30px",
+                  width: iconSize,
                   bg: `muted`,
                   borderRadius: "10px",
                   p: 1,

@@ -1,6 +1,7 @@
 import React from "react";
 import ToogleMode from './ToogleMode'
 import { Link } from 'gatsby'
+import siteConfig from "../../data/SiteConfig";
 
 /** @jsx jsx */
 import { Styled , jsx} from 'theme-ui'
@@ -31,6 +32,7 @@ class NavMenu extends React.Component {
   render() {
     const { scrolled } = this.state
     const { menuLinks } = this.props
+    const { siteTitle } = siteConfig;
 
 
     let shadow = `none`;
@@ -65,7 +67,7 @@ class NavMenu extends React.Component {
             }}
           >
             <Link to="/" sx={{textDecoration: `none`, color: `primary`}}>
-              <div>LOGO HERE</div>
+              <div>{siteTitle}</div>
             </Link>
             <div style={{ display: `flex`, alignItems: `center` }}>
               {menuLinks.map(link => {
