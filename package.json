@@ -15,7 +15,7 @@
     "gatsby-plugin-google-analytics": "^2.1.19",
     "gatsby-plugin-lodash": "^3.1.10",
     "gatsby-plugin-manifest": "^2.2.20",
-    "gatsby-plugin-mdx": "^1.0.52",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-nprogress": "^2.1.9",
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-page-creator": "^2.1.27",
